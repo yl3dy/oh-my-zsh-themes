@@ -1,7 +1,8 @@
+local ret_status="%(?:%{$fg_bold[black]%}>:%{$fg_bold[red]%}>)"
 PROMPT=$'%{$fg[blue]%}%/%{$reset_color%} $(git_prompt_info)$(hg_prompt_info)%{$fg[yellow]%}[%n@%m]%{$reset_color%} %{$fg[gray]%}[%T]%{$reset_color%}
-%{$fg_bold[black]%}>%{$reset_color%} '
+${ret_status}%{$reset_color%} '
 
-PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
+PROMPT2="%{$fg_bold[black]%}%_> %{$reset_color%}"
 
 GIT_CB="git::"
 HG_CB="hg::"
